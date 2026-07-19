@@ -73,6 +73,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.5.1 (2026-07-19)
+- Fix: Cmd+V paste (and Cmd+C/X/A/Z) not working in dialog text fields such as the API Key box — right-click was previously the only way
+
 ### 2.5.0 (2026-07-19)
 - New "Taiwanese Hokkien (Experimental)" recognition mode — speak Taiwanese, and with output language set, get Chinese/English/Japanese/Korean text
 - Selectable speech-recognition and polish/translate models, each labeled with developer and country of origin (defaults unchanged)
