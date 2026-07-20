@@ -73,6 +73,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.6.1 (2026-07-20)
+- Important fix: when dictating imperative sentences ("look this up for me…", "help me compare…"), the AI polish step could mistake the content for instructions addressed to itself and answer instead (e.g., outputting "Sorry, I can't help with that"). Dictation is now always transcribed faithfully, with a new safety fuse that falls back to the raw transcript if the polish output ever looks like an AI reply — strongly recommended for anyone dictating into ChatGPT/Claude or other AI tools
+
 ### 2.6.0 (2026-07-20)
 - **New "Self-Evolution"**: automatically analyzes your usage history, spots words that keep getting misheard, and proposes correction rules — approve once and they're fixed automatically forever. The more you use it, the more accurate it gets
 - **New TAIDE local polishing option**: supports Taiwan NSTC's TAIDE model (runs locally on your Mac via Ollama, so polished text never leaves your computer); full setup guidance included. Speech recognition and translation still use Groq
