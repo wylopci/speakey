@@ -73,6 +73,13 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.6.0 (2026-07-20)
+- **New "Self-Evolution"**: automatically analyzes your usage history, spots words that keep getting misheard, and proposes correction rules — approve once and they're fixed automatically forever. The more you use it, the more accurate it gets
+- **New TAIDE local polishing option**: supports Taiwan NSTC's TAIDE model (runs locally on your Mac via Ollama, so polished text never leaves your computer); full setup guidance included. Speech recognition and translation still use Groq
+- Local model resource optimization: capped context length and 3-minute idle auto-unload, preventing memory bloat and heat
+- Fix: error when the spoken content was pure digits (e.g., "123")
+- Fix: digit-heavy Chinese sentences being misdetected as foreign language and translated into English
+
 ### 2.5.1 (2026-07-19)
 - Fix: Cmd+V paste (and Cmd+C/X/A/Z) not working in dialog text fields such as the API Key box — right-click was previously the only way
 
