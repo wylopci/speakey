@@ -73,6 +73,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.8.1 (2026-07-21)
+- **Important fix**: dictated speech phrased as a rhetorical/self-directed question (e.g. "how should we make sure...", without addressing "you") could be mistaken by the AI polish step for a real question, causing it to generate an unrelated answer instead of transcribing the words. Fixed, with a new safety fuse that falls back to the raw transcript if this happens again
+
 ### 2.8.0 (2026-07-21)
 - **TAIDE local model rebuilt**: now runs on a built-in inference engine, downloading the model file directly from Hugging Face — Ollama is no longer required. One less app to install, and no more background service lingering in memory or causing heat
 - Added a proper in-app download flow (background download with progress) and a "Remove Local Model" option to free up 4.9GB
