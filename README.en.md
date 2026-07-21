@@ -73,6 +73,13 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.9.0 (2026-07-21)
+- **Local speech recognition added**: a built-in whisper.cpp engine (no Groq required), model file about 550MB, one-time download. Combined with the local TAIDE polish engine, you can run the entire "record → recognize → polish" pipeline fully offline — no internet connection needed at all
+- **Apple Silicon only** (M-series chips); the option doesn't appear on Intel Macs, for the same reason as local TAIDE polishing — CPU-only inference is too slow to be practical
+- Fix: with recognition language set to "Auto Detect," short utterances (1-2 seconds) could be misidentified as needing translation, turning the whole result into English. Now the language is detected first and confirmed before transcribing, so short utterances are recognized correctly in their original language
+- Added a "Remove Local Speech Model" management option (frees about 550MB)
+- EULA updated to disclose the local speech recognition model's origin (OpenAI's open-weight Whisper, as distributed by ggerganov/whisper.cpp)
+
 ### 2.8.2 (2026-07-21)
 - **Strengthened fix**: the 2.8.1 fix could still be unreliable in some cases. Now uses a more fundamental detection method — checking the "word-pair overlap" between the polished result and the original transcript. If the AI replaces the content with an unrelated answer (regardless of specific keywords or list formatting), it's now detected and automatically reverted to the raw transcript. Verified against the real case that triggered this
 
