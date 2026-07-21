@@ -73,6 +73,12 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.8.0 (2026-07-21)
+- **TAIDE local model rebuilt**: now runs on a built-in inference engine, downloading the model file directly from Hugging Face — Ollama is no longer required. One less app to install, and no more background service lingering in memory or causing heat
+- Added a proper in-app download flow (background download with progress) and a "Remove Local Model" option to free up 4.9GB
+- **TAIDE local model is now Apple Silicon only** (M-series chips); the option no longer appears on Intel Macs — CPU-only inference of an 8B model is too slow to be practical, so it's not offered there
+- Removed gpt-oss-20b and llama-3.1-8b-instant from the polish model list: testing showed no meaningful speed difference versus the flagship models, so the menu is simplified
+
 ### 2.7.0 (2026-07-21)
 - **Auto-update added**: Speakey periodically checks GitHub for new versions. When one is found, click "Update Now" to automatically download, verify the signature (notarization + developer identity double-check), install, and relaunch — no more manual DMG downloads. Auto-checking can be turned off in Advanced settings, and you can always trigger "Check for Updates" manually
 - Privacy disclosure updated to describe that the update check sends only a version query, no personal data or usage content
