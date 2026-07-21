@@ -73,6 +73,10 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.7.0 (2026-07-21)
+- **Auto-update added**: Speakey periodically checks GitHub for new versions. When one is found, click "Update Now" to automatically download, verify the signature (notarization + developer identity double-check), install, and relaunch — no more manual DMG downloads. Auto-checking can be turned off in Advanced settings, and you can always trigger "Check for Updates" manually
+- Privacy disclosure updated to describe that the update check sends only a version query, no personal data or usage content
+
 ### 2.6.1 (2026-07-20)
 - Important fix: when dictating imperative sentences ("look this up for me…", "help me compare…"), the AI polish step could mistake the content for instructions addressed to itself and answer instead (e.g., outputting "Sorry, I can't help with that"). Dictation is now always transcribed faithfully, with a new safety fuse that falls back to the raw transcript if the polish output ever looks like an AI reply — strongly recommended for anyone dictating into ChatGPT/Claude or other AI tools
 
