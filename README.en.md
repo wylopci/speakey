@@ -73,6 +73,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.8.2 (2026-07-21)
+- **Strengthened fix**: the 2.8.1 fix could still be unreliable in some cases. Now uses a more fundamental detection method — checking the "word-pair overlap" between the polished result and the original transcript. If the AI replaces the content with an unrelated answer (regardless of specific keywords or list formatting), it's now detected and automatically reverted to the raw transcript. Verified against the real case that triggered this
+
 ### 2.8.1 (2026-07-21)
 - **Important fix**: dictated speech phrased as a rhetorical/self-directed question (e.g. "how should we make sure...", without addressing "you") could be mistaken by the AI polish step for a real question, causing it to generate an unrelated answer instead of transcribing the words. Fixed, with a new safety fuse that falls back to the raw transcript if this happens again
 
