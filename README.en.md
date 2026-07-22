@@ -73,6 +73,10 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.9.1 (2026-07-22)
+- **Numbered list formatting added**: when you explicitly enumerate points while dictating (e.g. "first / second / next"), AI polishing now automatically formats them as a "1. 2. 3." numbered list; if the numbering skips or repeats due to a slip of the tongue, it's automatically renumbered in speaking order. The actual content of each point is always kept exactly as spoken — the AI never reconciles contradictions or guesses the "correct" count for you
+- **Fix**: after removing a local model (TAIDE / speech recognition), the corresponding "Remove Local Model" menu item didn't disappear until the app was restarted. It's now refreshed every time "Advanced" is opened
+
 ### 2.9.0 (2026-07-21)
 - **Local speech recognition added**: a built-in whisper.cpp engine (no Groq required), model file about 550MB, one-time download. Combined with the local TAIDE polish engine, you can run the entire "record → recognize → polish" pipeline fully offline — no internet connection needed at all
 - **Apple Silicon only** (M-series chips); the option doesn't appear on Intel Macs, for the same reason as local TAIDE polishing — CPU-only inference is too slow to be practical
