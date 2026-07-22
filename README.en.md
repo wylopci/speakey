@@ -73,6 +73,14 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.0.0 (2026-07-23)
+- **Dual-model local speech recognition**: Chinese/Taiwanese now automatically uses MediaTek's Breeze-ASR-26, which tested significantly more accurate than the general model; English/Japanese/Korean and auto-detect continue using whisper-large-v3-turbo. The app switches between them automatically based on detected language — no manual selection needed
+- Dropped "(Experimental)" from the Taiwanese Hokkien mode label — real-world testing after the dual-model upgrade shows it's ready for regular use
+- **Added local model update checking**: TAIDE / Breeze-ASR-26 / general Whisper are now periodically checked against their source repositories; when an update is found, you'll get a prompt and can re-download with one click, and the menu item itself shows an "(update available)" note
+- Added "Show Model Storage Location" in Advanced Settings — opens the model folder directly in Finder
+- Fixed: removing a local model that fails (permission issues, file in use, etc.) previously showed nothing on screen; it now displays a "Removal failed" message
+- The EULA now discloses licensing for local models: publisher and license terms for TAIDE, Breeze-ASR-26, and Whisper
+
 ### 2.9.3 (2026-07-22)
 - **Local speech recognition now uses your custom glossary**: previously only Groq cloud recognition benefited from the terms you set in "Add Custom Terms" for better accuracy; local (offline) Whisper now applies the same glossary too, improving recognition of proper nouns and specific spellings
 - **TAIDE download dialog now discloses licensing**: clearly states the model is released by Taiwan's NSTC TAIDE project and is governed by its own license terms, separate from the Speakey software license
