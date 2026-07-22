@@ -73,6 +73,10 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.9.3 (2026-07-22)
+- **Local speech recognition now uses your custom glossary**: previously only Groq cloud recognition benefited from the terms you set in "Add Custom Terms" for better accuracy; local (offline) Whisper now applies the same glossary too, improving recognition of proper nouns and specific spellings
+- **TAIDE download dialog now discloses licensing**: clearly states the model is released by Taiwan's NSTC TAIDE project and is governed by its own license terms, separate from the Speakey software license
+
 ### 2.9.2 (2026-07-22)
 - **Fix**: after removing a local model (TAIDE / speech recognition), the checkmark in the "Polish/Translate Model" and "Speech Recognition Model" menus stayed on the local model instead of jumping back to the actual Groq default in use. The state is now re-checked every time these menus are opened
 
