@@ -73,6 +73,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 2.9.2 (2026-07-22)
+- **Fix**: after removing a local model (TAIDE / speech recognition), the checkmark in the "Polish/Translate Model" and "Speech Recognition Model" menus stayed on the local model instead of jumping back to the actual Groq default in use. The state is now re-checked every time these menus are opened
+
 ### 2.9.1 (2026-07-22)
 - **Numbered list formatting added**: when you explicitly enumerate points while dictating (e.g. "first / second / next"), AI polishing now automatically formats them as a "1. 2. 3." numbered list; if the numbering skips or repeats due to a slip of the tongue, it's automatically renumbered in speaking order. The actual content of each point is always kept exactly as spoken — the AI never reconciles contradictions or guesses the "correct" count for you
 - **Fix**: after removing a local model (TAIDE / speech recognition), the corresponding "Remove Local Model" menu item didn't disappear until the app was restarted. It's now refreshed every time "Advanced" is opened
