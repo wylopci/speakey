@@ -73,6 +73,10 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.1.0 (2026-07-23)
+- **Added a first-time setup wizard** — brand-new installs are now guided through three choices: online (Groq) vs. offline vs. both for speech recognition and polishing (with download size disclosed upfront); your default recognition language (choosing Taiwanese Hokkien shows a tip that online accuracy is lower, with an option to also download the offline model); and setting up your Groq API key. Everything chosen here can still be changed anytime afterward in Advanced Settings
+- Existing users who already have an API key configured are unaffected — the wizard won't interrupt an upgrade
+
 ### 3.0.0 (2026-07-23)
 - **Dual-model local speech recognition**: Chinese/Taiwanese now automatically uses MediaTek's Breeze-ASR-26, which tested significantly more accurate than the general model; English/Japanese/Korean and auto-detect continue using whisper-large-v3-turbo. The app switches between them automatically based on detected language — no manual selection needed
 - Dropped "(Experimental)" from the Taiwanese Hokkien mode label — real-world testing after the dual-model upgrade shows it's ready for regular use
