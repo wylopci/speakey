@@ -73,6 +73,13 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.2.0 (2026-07-23)
+- **Added "Taiwanese Hokkien (Han Characters, Experimental)" output language** — polished Chinese text can now be further translated into Taiwanese Hokkien written in Han characters, using the local SARC-Taigi-LLM model (based on Google Gemma-3, fine-tuned and released by NYCU's Speech AI Research Center), running fully offline. Apple Silicon only. Quality has been consistently good across repeated testing but is still marked experimental — use with care
+- Numbered lists (1. 2. 3.) now keep their numbering correctly when translated into Taiwanese Hokkien, instead of being mistranslated into Chinese numerals
+- **Reorganized local model management** — "Remove Local Speech Model," "Remove Local TAIDE Model," "Remove Taiwanese Translation Model," "Show Model Storage Location," and "Check for Model Updates" are now grouped into a single "Local Model Management" submenu instead of cluttering Advanced Settings
+- Selecting "Taiwanese Hokkien" as the recognition language while using online (Groq) recognition now requires downloading/switching to the offline model on Apple Silicon before the switch completes (offline accuracy is noticeably better); Intel Macs, which have no offline model available, still show a reminder but aren't blocked
+- Fixed an issue where local speech recognition would occasionally hallucinate on short utterances (producing one or two unrelated characters); added a retry mechanism
+
 ### 3.1.1 (2026-07-23)
 - **Fixed a selection bug in the first-time setup wizard**: the "Speech Recognition" and "Polishing" engine option groups shared the same container, so picking an option in one group would silently clear the selection in the other. They're now fully independent
 
