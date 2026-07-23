@@ -73,6 +73,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.1.1 (2026-07-23)
+- **Fixed a selection bug in the first-time setup wizard**: the "Speech Recognition" and "Polishing" engine option groups shared the same container, so picking an option in one group would silently clear the selection in the other. They're now fully independent
+
 ### 3.1.0 (2026-07-23)
 - **Added a first-time setup wizard** — brand-new installs are now guided through three choices: online (Groq) vs. offline vs. both for speech recognition and polishing (with download size disclosed upfront); your default recognition language (choosing Taiwanese Hokkien shows a tip that online accuracy is lower, with an option to also download the offline model); and setting up your Groq API key. Everything chosen here can still be changed anytime afterward in Advanced Settings
 - Existing users who already have an API key configured are unaffected — the wizard won't interrupt an upgrade
