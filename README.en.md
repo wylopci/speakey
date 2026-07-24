@@ -20,10 +20,11 @@ Automatically strips filler words ("um", "uh"), adds punctuation, and can even t
 ## ✨ Features
 
 - **🎙 Hold to talk**: Hold Right Option and speak. 1–2 seconds after you release it, the text appears right at your cursor — LINE, Email, browser, Notes, anywhere
-- **🧹 AI polish**: Not a raw transcript — it's what you *meant* to say. Filler words, stutters, and repetition are cleaned up automatically, with punctuation added
-- **🌏 Multi-language**: Chinese (Taiwan) / English / Japanese / Korean, with auto-detection — speak any of them and it types in that language
+- **🇹🇼 Taiwanese Hokkien isn't an afterthought**: Almost no other voice input tool supports Taiwanese Hokkien. Speakey uses MediaTek's Breeze-ASR-26 model specifically to boost Taiwanese recognition accuracy — and can even translate your spoken Chinese into authentic Taiwanese Hokkien Han characters in real time (experimental)
+- **🧹 AI polish**: Not a raw transcript — it's what you *meant* to say. Filler words, stutters, and repetition are cleaned up automatically, with punctuation added, and the tone adapts automatically to whichever app you paste into
+- **🌏 Auto-detects Chinese, English, Japanese, Korean**: Speak any of them and it types in that language — no manual switching
 - **🔁 Live translation**: Speak Chinese, get English out — great for writing English emails or replying to overseas clients
-- **🎯 Context-aware tone**: Formal when pasted into Email, casual when pasted into a chat app — it adapts to where you're typing
+- **🔒 Fully offline mode**: Speech recognition and AI polishing can both run on local models instead — from recording to typed text, nothing touches the network, for anyone who wants that extra peace of mind
 - **🧠 Gets better with use**: Learns your vocabulary locally on your Mac and suggests frequent terms; a "misheard → correct" rule set permanently fixes stubborn mis-transcriptions
 - **🕶 Privacy by design**: No account, no tracking, no company server — usage history lives only on your Mac, and you can turn it off or delete it anytime
 
