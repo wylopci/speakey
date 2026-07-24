@@ -73,6 +73,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.2.1 (2026-07-24)
+- **Fixed an issue where text would occasionally fail to auto-paste** — added active detection of macOS's "Automation" permission (needed to control System Events for sending Cmd+V, a separate permission from Accessibility), guiding you to System Settings if it's denied. Also, if pasting fails, the clipboard is no longer immediately restored — the result stays on the clipboard longer with an on-screen prompt to paste manually with Cmd+V, so the recognized text is never simply lost
+
 ### 3.2.0 (2026-07-23)
 - **Added "Taiwanese Hokkien (Han Characters, Experimental)" output language** — polished Chinese text can now be further translated into Taiwanese Hokkien written in Han characters, using the local SARC-Taigi-LLM model (based on Google Gemma-3, fine-tuned and released by NYCU's Speech AI Research Center), running fully offline. Apple Silicon only. Quality has been consistently good across repeated testing but is still marked experimental — use with care
 - Numbered lists (1. 2. 3.) now keep their numbering correctly when translated into Taiwanese Hokkien, instead of being mistranslated into Chinese numerals
