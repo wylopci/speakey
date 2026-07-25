@@ -74,6 +74,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.5.0 (2026-07-25)
+- General optimizations
+
 ### 3.4.1 (2026-07-25)
 - **Update checks now run on a recurring timer**: previously the check only ran once at app launch, so anyone who leaves their Mac on with Speakey running could go days without being checked. It now runs every 24 hours (for both app updates and local model updates), so you get new-version notifications even without restarting
 
