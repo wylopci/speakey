@@ -74,6 +74,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.5.1 (2026-07-25)
+- Clarified the API key screens: signing up for Groq is completely free with no credit card required, and the free tier covers thousands of voice inputs per day — so first-time users don't have to worry about cost
+
 ### 3.5.0 (2026-07-25)
 - General optimizations
 
