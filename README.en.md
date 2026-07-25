@@ -74,6 +74,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.3.1 (2026-07-24)
+- Added a clarifying note to the "Polish / Translation Model" menu: Taiwanese Hokkien (Han character) output uses a separate model (SARC-Taigi-LLM) and is unaffected by this menu — this avoids the confusion of switching output to Taiwanese Hokkien and then seeing no change in this menu's selection, making it look like nothing happened
+
 ### 3.3.0 (2026-07-24)
 - **Context-aware paragraph breaks during polishing** — when pasting into Email or note-taking apps, if the content covers multiple points or shifts topic, polishing now automatically breaks it into paragraphs following the logical structure of what was said, instead of leaving it as one run-on block. Only paragraph breaks are adjusted — nothing is ever added that wasn't spoken (chat apps and other contexts are unaffected)
 - Fixed a false positive in the polishing safety check — synonym substitution (e.g., the model rewriting "this week" as a different but equivalent phrase) could trip the "off-topic" detector and discard a perfectly good polished result; the detection threshold has been adjusted to fix this
