@@ -74,6 +74,13 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.4.0 (2026-07-25)
+- **Much faster local recognition for long recordings**: past 30 seconds, whisper.cpp splits audio into multiple windows, which was triggering its built-in temperature-fallback retry loop — a 39-second recording took 120 seconds, ran the machine hot, and the retries actually produced *worse* output (unrelated hallucinated text). Disabling that fallback brings the same recording down from 121s to 2.9s (42× faster) and fixes the hallucination and dropped opening words at the same time. Recordings under 30 seconds are completely unchanged
+- **Fixed polishing swapping personal pronouns**: under specific conditions (condense level "mild" + pasting into a technical tool), "you do it my way" was being rewritten as "do it your way" — the opposite meaning. Changing pronouns is now explicitly forbidden in the polishing rules
+- **Reduced hallucinations at the start of transcripts**: leading silence/breath is now trimmed before recognition, reducing the chance the model invents unrelated words for that non-speech audio (0.2s of lead-in is kept so the first word is never clipped)
+- "Launch at Login" moved into Advanced Settings; "Local Model Management" moved below "Check for Updates Automatically" for a tidier main menu
+- Donation reminder: now appears every 20 uses and the "Don't Remind Me Again" button was removed; clicking "Support" stops it permanently
+
 ### 3.3.1 (2026-07-24)
 - Added a clarifying note to the "Polish / Translation Model" menu: Taiwanese Hokkien (Han character) output uses a separate model (SARC-Taigi-LLM) and is unaffected by this menu — this avoids the confusion of switching output to Taiwanese Hokkien and then seeing no change in this menu's selection, making it look like nothing happened
 
