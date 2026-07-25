@@ -74,6 +74,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.4.1 (2026-07-25)
+- **Update checks now run on a recurring timer**: previously the check only ran once at app launch, so anyone who leaves their Mac on with Speakey running could go days without being checked. It now runs every 24 hours (for both app updates and local model updates), so you get new-version notifications even without restarting
+
 ### 3.4.0 (2026-07-25)
 - **Much faster local recognition for long recordings**: past 30 seconds, whisper.cpp splits audio into multiple windows, which was triggering its built-in temperature-fallback retry loop — a 39-second recording took 120 seconds, ran the machine hot, and the retries actually produced *worse* output (unrelated hallucinated text). Disabling that fallback brings the same recording down from 121s to 2.9s (42× faster) and fixes the hallucination and dropped opening words at the same time. Recordings under 30 seconds are completely unchanged
 - **Fixed polishing swapping personal pronouns**: under specific conditions (condense level "mild" + pasting into a technical tool), "you do it my way" was being rewritten as "do it your way" — the opposite meaning. Changing pronouns is now explicitly forbidden in the polishing rules
