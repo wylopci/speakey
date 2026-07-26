@@ -74,6 +74,11 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.6.0 (2026-07-26)
+- **Added Apple's built-in speech recognition engine** (requires macOS 26+ on Apple Silicon): fully offline with no model download at all, and dramatically faster — a 35-second recording transcribes in 0.5s in our testing, 3–5× faster than local Whisper, with better handling of mixed Chinese/English technical terms
+- Supports Chinese, English, Japanese and Korean. **Taiwanese Hokkien still uses Breeze-ASR-26** — Speakey switches automatically when you select it, and Taiwanese Han character output is unaffected
+- Apple's engine requires an explicit locale (it cannot auto-detect the language), so it isn't available while Recognition Language is set to "Auto-detect" — the menu will prompt you to pick a language first
+
 ### 3.5.1 (2026-07-25)
 - Clarified the API key screens: signing up for Groq is completely free with no credit card required, and the free tier covers thousands of voice inputs per day — so first-time users don't have to worry about cost
 
