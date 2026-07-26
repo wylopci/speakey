@@ -19,8 +19,8 @@ Automatically strips filler words ("um", "uh"), adds punctuation, and can even t
 
 ## ✨ Features
 
-- **🎙 Hold to talk**: Hold Right Option and speak. 1–2 seconds after you release it, the text appears right at your cursor — LINE, Email, browser, Notes, anywhere
-- **🇹🇼 Taiwanese Hokkien isn't an afterthought**: Almost no other voice input tool supports Taiwanese Hokkien. Speakey uses MediaTek's Breeze-ASR-26 model specifically to boost Taiwanese recognition accuracy — and can even translate your spoken Chinese into authentic Taiwanese Hokkien Han characters in real time (experimental)
+- **🎙 Hold to talk**: Hold Right Option and speak. 1–2 seconds after you release it, the text appears right at your cursor — LINE, Email, browser, Notes, anywhere. The trigger key can be changed to Left Option or Right Command in Settings
+- **🇹🇼 Taiwanese Hokkien isn't an afterthought**: Almost no other voice input tool supports Taiwanese Hokkien. Speakey uses MediaTek's Breeze-ASR-26 model specifically to boost Taiwanese recognition accuracy — and can even translate your spoken Chinese into authentic Taiwanese Hokkien Han characters in real time
 - **🧹 AI polish**: Not a raw transcript — it's what you *meant* to say. Filler words, stutters, and repetition are cleaned up automatically, with punctuation added, and the tone adapts automatically to whichever app you paste into
 - **🌏 Auto-detects Chinese, English, Japanese, Korean**: Speak any of them and it types in that language — no manual switching
 - **🔁 Live translation**: Speak Chinese, get English out — great for writing English emails or replying to overseas clients
@@ -73,6 +73,10 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 - Internet connection required (speech recognition runs in the cloud)
 
 ## 🗒 Changelog
+
+### 3.6.2 (2026-07-27)
+- **You can now choose your own trigger key.** Advanced Settings gains a "Trigger Key" option — alongside the original Right Option, you can switch to Left Option or Right Command. Takes effect immediately, no restart needed
+- **Keyboard shortcuts no longer trigger it by accident.** If you press another key while holding the trigger key, you're using a shortcut (like Cmd+C) rather than dictating, so the recording is aborted and discarded instead of dropping unexpected text into your document. You don't press other keys while actually speaking, so normal use is unaffected
 
 ### 3.6.1 (2026-07-26)
 - **Recognition Language now defaults to your system language.** It used to default to "Auto-detect", but Apple's built-in engine requires an explicit locale, so a fresh install sitting on Auto-detect left that engine unselectable. Speakey now picks Chinese / English / Japanese / Korean based on your current macOS language (other system languages stay on Auto-detect). Existing users who never changed this setting are switched over too; a language you picked yourself is never overwritten
