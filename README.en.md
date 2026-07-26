@@ -74,6 +74,9 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.6.3 (2026-07-27)
+- **Fixed a crash when a local model file is missing.** If the local speech recognition model had been deleted by hand, left incomplete by an interrupted download, or removed by a disk cleaner, pressing the trigger key made Speakey vanish without a word (the underlying engine ran transcription on a null pointer). It now says "Local model file is missing — re-download it in Advanced Settings" instead of crashing
+
 ### 3.6.2 (2026-07-27)
 - **You can now choose your own trigger key.** Advanced Settings gains a "Trigger Key" option — alongside the original Right Option, you can switch to Left Option or Right Command. Takes effect immediately, no restart needed
 - **Keyboard shortcuts no longer trigger it by accident.** If you press another key while holding the trigger key, you're using a shortcut (like Cmd+C) rather than dictating, so the recording is aborted and discarded instead of dropping unexpected text into your document. You don't press other keys while actually speaking, so normal use is unaffected
