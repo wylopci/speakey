@@ -74,6 +74,10 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.6.1 (2026-07-26)
+- **Recognition Language now defaults to your system language.** It used to default to "Auto-detect", but Apple's built-in engine requires an explicit locale, so a fresh install sitting on Auto-detect left that engine unselectable. Speakey now picks Chinese / English / Japanese / Korean based on your current macOS language (other system languages stay on Auto-detect). Existing users who never changed this setting are switched over too; a language you picked yourself is never overwritten
+- Dropped the "Experimental" label from Taiwanese Han character output
+
 ### 3.6.0 (2026-07-26)
 - **Added Apple's built-in speech recognition engine** (requires macOS 26+ on Apple Silicon): fully offline with no model download at all, and dramatically faster — a 35-second recording transcribes in 0.5s in our testing, 3–5× faster than local Whisper, with better handling of mixed Chinese/English technical terms
 - Supports Chinese, English, Japanese and Korean. **Taiwanese Hokkien still uses Breeze-ASR-26** — Speakey switches automatically when you select it, and Taiwanese Han character output is unaffected
