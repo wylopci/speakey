@@ -74,6 +74,13 @@ Full step-by-step instructions are in the interactive *Install Guide* inside the
 
 ## 🗒 Changelog
 
+### 3.6.5 (2026-08-03)
+- **Fixed cloud speech recognition failing permanently once the custom vocabulary grew large enough.** Groq's Whisper API caps the vocabulary hint at 896 UTF-8 *bytes*, not characters — since each Chinese character takes 3 bytes, that's really only about 260 Chinese characters of headroom. The custom vocabulary keeps growing with no cap as the "self-evolution" feature adds terms, and once it crossed that threshold, cloud recognition (Chinese/Taiwanese) started getting rejected by the server on every single request (shown as "Groq API 無回應 Error code 400"), and the built-in retry couldn't help since it resent the same oversized prompt. Local and Apple-engine recognition were unaffected. The prompt is now trimmed to fit the byte budget automatically, keeping the most recently added terms, so it can no longer grow past the limit
+
+### 3.6.4 (2026-07-29)
+- **Full Cantonese support.** Cantonese is now available as both a recognition and output language. Cloud and local Whisper use its dedicated language code, transcripts use Hong Kong Traditional Chinese, and AI polishing preserves Cantonese wording and grammar instead of rewriting it into Mandarin or Taiwanese Mandarin
+- Macs configured for Hong Kong automatically default to Cantonese. Apple's built-in engine checks whether `zh-HK` is actually supported on that Mac before enabling it
+
 ### 3.6.3 (2026-07-27)
 - **Fixed a crash when a local model file is missing.** If the local speech recognition model had been deleted by hand, left incomplete by an interrupted download, or removed by a disk cleaner, pressing the trigger key made Speakey vanish without a word (the underlying engine ran transcription on a null pointer). It now says "Local model file is missing — re-download it in Advanced Settings" instead of crashing
 
